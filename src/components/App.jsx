@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import $ from 'jquery';
 import logo from '../logo.svg';
 import QuestionList from './quiz/QuestionList.jsx';
+import ScoreBox from './quiz/ScoreBox.jsx';
 
 class App extends Component {
 	constructor(props) {
@@ -119,6 +120,7 @@ class App extends Component {
 	render() {
 		return (
 			<div>
+				<ScoreBox {...this.state} />
 				<QuestionList {...this.state} setCurrent={this.setCurrent.bind(this)} setScore={this.setScore.bind(this)} />
 			</div>
 		);
